@@ -1,0 +1,95 @@
+﻿/* c64-startup-screen style sheet */
+
+@font-face {
+    font-family: 'C64_Pro_Mono-STYLE';
+    src: url('fonts/C64_Pro_Mono-STYLE.eot');
+    src: url('fonts/C64_Pro_Mono-STYLE.eot?#iefix') format('embedded-opentype'),
+    url('fonts/C64_Pro_Mono-STYLE.woff2') format('woff2'),
+    url('fonts/C64_Pro_Mono-STYLE.woff') format('woff'),
+    url('fonts/C64_Pro_Mono-STYLE.ttf') format('truetype');
+    font-weight: normal;
+}
+
+/* HTML elements */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+}
+a {
+    color: #6076C5;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* IDs */
+
+#c64 {
+    height: 100vh;
+    color: #6076C5;
+}
+#c64-startup {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: #20398D;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: #6076C5 70px solid;
+}
+#c64-startup-header {
+    text-align: center;
+    padding-top: 40px;
+    margin: 0 auto;
+}
+#c64-startup-prompt {
+    padding-top: 40px;
+    left: 75px;
+}
+#c64-startup-footnote {
+    position: fixed;
+    bottom: 72px;
+    right: 76px;
+    text-align: right;
+    font-size: 80%;
+}
+
+/* classes */
+
+.c64-font {
+    font-family: 'C64_Pro_Mono-STYLE', 'Courier New', Courier, monospace;
+    font-size: 160%;
+    line-height: 100%;
+}
+
+/* layout for small screens */
+
+@media screen and (max-device-width: 1400px) {
+    #c64-startup-header {
+        padding-top: 35px;
+    }
+    #c64-startup-prompt {
+        padding-top: 35px;
+    }
+    .c64-font {
+        font-size: 130%;
+    }
+}
+@media screen and (max-device-width: 1100px) {
+    #c64-startup-header {
+        padding-top: 30px;
+    }
+     #c64-startup-prompt {
+        padding-top: 30px;
+    }
+    .c64-font {
+        font-size: 100%;
+    }
+}
